@@ -22,9 +22,5 @@ This file contains all the parameters used in code.
 
 ***************************
 Working link
-http://udagr-WebAp-EIBYFW47VBL4-1890480932.us-west-2.elb.amazonaws.com
+http://udagr-webap-np4ogpjwquqd-183291497.us-west-2.elb.amazonaws.com/
 ***************************
-
-Ip's to open project in web browser
-1. http://34.208.170.117/
-2. http://44.241.219.85/

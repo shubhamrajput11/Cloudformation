@@ -222,8 +222,9 @@ Resources:
         Statement:
           - Effect: Allow
             Action:
-              - s3:Get*
-              - s3:List*
+              - "s3:Get*"
+              - "s3:Head*"
+              - "s3:List*"
             Resource:
               - arn:aws:s3:::udagram-shubham
               - arn:aws:s3:::udagram-shubham/*
@@ -286,10 +287,10 @@ Resources:
           apt-get update -y
           apt-get install unzip awscli -y
           apt-get install apache2 -y
-          systemctl start apache2.service
           cd /var/www/html
           aws s3 cp s3://udagram-shubham/udagram_test.zip .
-          unzip -o udagram_test.zip
+          sudo unzip -oj udagram_test.zip
+          systemctl start apache2.service
       ImageId: ami-02701bcdc5509e57b
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
       SecurityGroups:
